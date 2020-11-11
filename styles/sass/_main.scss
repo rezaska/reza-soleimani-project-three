@@ -1,0 +1,61 @@
+.header {
+    height: 20vh;
+    background-color: $primary;
+    color: white;
+    text-align: center;
+}
+
+.header-text {
+    @include fontDef(52px, white);
+    font-family: 'Anton', sans-serif;
+    display: inline-block;
+    padding-top: 25px;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    background-color: $secondary;
+}
+
+.rules {
+    height: 25vh;
+    text-align: center;
+}
+
+.rules-text {
+    display: inline-block;
+    font-family: 'Signika', sans-serif;
+    margin-top: 30px;
+    @include fontDef(24px, $primary);
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 50vh;
+}
+
+.footer {
+    background-color: $primary;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-text {
+    margin: 0;
+    @include fontDef(20px, white);
+    font-family: 'Signika', sans-serif;
+}
+
+.footer-text a {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+}

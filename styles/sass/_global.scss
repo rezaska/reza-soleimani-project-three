@@ -1,0 +1,13 @@
+$primary: #102B3F;
+$secondary: #A06CD5;
+
+@mixin fontSize($sizeValue) {
+    font-size: $sizeValue;
+    font-style: normal;
+    color: $primary;
+}
+
+@mixin fontDef($sizeValue, $fontColor) {
+    font-size: $sizeValue;
+    color: $fontColor;
+}
