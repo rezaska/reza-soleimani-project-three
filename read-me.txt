@@ -14,3 +14,13 @@ Strech goals:
 3. allow the user to ask a hint.
 4. add an Easter egg somewhere on the landing page!
 5. define a randomizer function to generate a random set of new cards, including one joker card.
+
+----------------------------------------------------------
+
+// check whether the document is ready for JS.
+// have an event listener for click on one of the cards.
+// create a loop through the chosen card.
+// if the first selected card is joker then the game is over (show "game over" message).
+// if the selected card is not joker then let the user choose second card (show "choose the next card" message).
+// if the second selected card is joker then the game is over (show "game over" message).
+// if the second selected card is not joker then the user win (show "you win" message).
