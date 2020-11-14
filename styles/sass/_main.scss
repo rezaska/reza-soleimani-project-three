@@ -59,3 +59,62 @@ main {
     color: white;
     font-style: italic;
 }
+
+.result {
+    text-align: center;
+}
+
+.result-text {
+    margin: 0;
+    display: inline-block;
+    font-family: 'Signika', sans-serif;
+    @include fontDef(60px, $primary);
+    padding-bottom: 50px;
+}
+
+
+
+
+
+
+
+.flip-card {
+    margin-bottom: 150px;
+    // margin: 100px auto 0;
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner1,
+.flip-card-inner2,
+.flip-card-inner3 {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+// .flip-card-inner1 .is-flipped {
+//     transform: rotateY(180deg);
+// }
+
+// .card__face {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     -webkit-backface-visibility: hidden;
+//     backface-visibility: hidden;
+//     border-radius: 16px;
+//     box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+// }
+
+// .card__face--back1,
+// .card__face--back2,
+// .card__face--back3 {
+//     transform: rotateY(180deg);
+// }
+
+

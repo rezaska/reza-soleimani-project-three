@@ -7,7 +7,6 @@
     <title>Joker Run!</title>
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Signika:wght@300&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -29,39 +28,45 @@
         </section>
 
         <section class="cards">
-            <div class="flip-card1">
+            <div class="flip-card" id="not-joker">
                 <div class="flip-card-inner1">
-                    <div class="flip-card-front1">
+                    <div class="card__face card__face--front1">
                         <img src="images/Card_back_06.svg">
                     </div>
-                    <div class="flip-card-back1">
-
+                    <div class="card__face card__face--back1">
+                        <!-- <img src="images/5C.svg"> -->
                     </div>
                 </div>
             </div>
 
-            <div class="flip-card2">
+            <div class="flip-card" id="joker">
                 <div class="flip-card-inner2">
-                    <div class="flip-card-front2">
+                    <div class="card__face card__face--front2">
                         <img src="images/Card_back_06.svg">
                     </div>
-                    <div class="flip-card-back2">
-
+                    <div class="card__face card__face--back2">
+                        <!-- <img src="images/joker card.svg"> -->
                     </div>
                 </div>
             </div>
 
-            <div class="flip-card3">
+            <div class="flip-card" id="not-joker">
                 <div class="flip-card-inner3">
-                    <div class="flip-card-front3">
+                    <div class="card__face card__face--front3">
                         <img src="images/Card_back_06.svg">
                     </div>
-                    <div class="flip-card-back3">
-
+                    <div class="card__face card__face--back3">
+                        <!-- <img src="images/10H.svg"> -->
                     </div>
                 </div>
             </div>
         </section>
+
+        <div class="result">
+            <p class="result-text">
+                Choose Your First Card!
+            </p>
+        </div>
     </main>
 
     <footer>
@@ -69,6 +74,9 @@
             <p class="footer-text">Created at <a href="www.junocollege.com">Juno College</a> - 2020</p>
         </div>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
