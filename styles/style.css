@@ -260,7 +260,7 @@ main {
 }
 
 .rules {
-  height: 25vh;
+  height: 20vh;
   text-align: center;
 }
 
@@ -270,23 +270,6 @@ main {
   margin-top: 30px;
   font-size: 24px;
   color: #102B3F;
-}
-
-.cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  height: 50vh;
 }
 
 .footer {
@@ -316,30 +299,138 @@ main {
   margin: 0;
   display: inline-block;
   font-family: 'Signika', sans-serif;
-  font-size: 60px;
+  font-size: 45px;
   color: #102B3F;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
+}
+
+.button {
+  background-color: #102B3F;
+  border: none;
+  color: white;
+  font-family: 'Signika', sans-serif;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 28px;
+  border-radius: 4px;
+}
+
+.button-container {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 40vh;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .flip-card {
-  margin-bottom: 150px;
   width: 200px;
-  height: 300px;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
+  height: 260px;
+  -webkit-perspective: 600px;
+          perspective: 600px;
+  position: relative;
+}
+
+.flip-card.active .flip-card-inner1 {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip-card.active .flip-card-inner2 {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip-card.active .flip-card-inner3 {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .flip-card-inner1,
 .flip-card-inner2,
 .flip-card-inner3 {
+  cursor: pointer;
   width: 100%;
   height: 100%;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
+  position: relative;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  cursor: pointer;
-  position: relative;
+}
+
+.card__face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.card__face--front1,
+.card__face--front2,
+.card__face--front3 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__face--back1,
+.card__face--back2,
+.card__face--back3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+@media (max-width: 700px) {
+  .header-text {
+    font-size: 30px;
+    padding: 20px 40px 20px 40px;
+  }
+  .rules {
+    margin-bottom: 60px;
+  }
+  .rules-text {
+    padding: 0 5px 0 5px;
+    font-size: 20px;
+  }
+  .cards {
+    height: 100%;
+  }
+  .flip-card {
+    padding: 5px;
+  }
+  .result-text {
+    font-size: 35px;
+    padding: 20px 5px 20px 5px;
+  }
 }

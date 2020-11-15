@@ -3,15 +3,6 @@ $(document).ready(function () {
   let choices = [];
   let numberOfChoices = 0;
 
-  // I need to shuffle cards
-  //random generator
-  //array with joker and not joker
-
-  // function shuffleCards() {
-  //   const ;
-  //   return ;
-  // }
-
   $(function () {
     const parent = $('.cards');
     const divs = parent.children();
@@ -20,19 +11,18 @@ $(document).ready(function () {
     }
   });
 
-
-
-
   const selectedCard = $('.flip-card').on('click', function () {
+    let $this = $(this);
+    if ($this.hasClass('active')) return;
 
-    choices.push($(this).attr('id'));
+    $this.addClass('active');
+    choices.push($this.attr('id'));
     numberOfChoices++;
     if (numberOfChoices > 2) {
       numberOfChoices = 0;
       choices = [];
     };
 
-    // added the win message
     for (let i = 0; i < choices.length; i++) {
 
       if (choices[i] === 'not-joker' && numberOfChoices == 1) {
@@ -66,13 +56,8 @@ $(document).ready(function () {
 
   });
 
-});
+  let resetGame = $('.button').on('click', function () {
+    location.reload()
+  });
 
-// check whether the document is ready for JS.
-// have an event listener for click on one of the cards.
-// prevent the default behavior.
-// create a loop through the chosen card:
-// if the first selected card is joker then the game is over (show "game over" message).
-// if the selected card is not joker then let the user choose second card (show "choose the next card" message).
-// if the second selected card is joker then the game is over (show "game over" message).
-// if the second selected card is not joker then the user win (show "you win" message).
+});
