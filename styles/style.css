@@ -243,12 +243,13 @@ html {
 }
 
 .header-text {
-  font-size: 52px;
+  font-size: 48px;
   color: white;
   font-family: 'Anton', sans-serif;
   display: inline-block;
   padding-top: 25px;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 h1 {

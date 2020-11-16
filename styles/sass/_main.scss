@@ -6,11 +6,12 @@
 }
 
 .header-text {
-    @include fontDef(52px, white);
+    @include fontDef(48px, white);
     font-family: 'Anton', sans-serif;
     display: inline-block;
     padding-top: 25px;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 h1 {
