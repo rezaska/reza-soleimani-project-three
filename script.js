@@ -34,12 +34,13 @@ $(document).ready(function () {
         $('.result').append(secondMessage);
 
       } else if (choices[i] === 'not-joker' && numberOfChoices == 2) {
-          const winnerMessage = `
-            <p class="result-text">
-              You win!
-            </p>`
-          $('.result').empty();
-          $('.result').append(winnerMessage);
+        const winnerMessage = `
+          <p class="result-text">
+            You win!
+          </p>`
+        $('.result').empty();
+        $('.result').append(winnerMessage);
+        $('.flip-card').off('click');
 
       } else {
         numberOfChoices = 0,
@@ -51,6 +52,7 @@ $(document).ready(function () {
       </p>`
         $('.result').empty();
         $('.result').append(loserMessage);
+        $('.flip-card').off('click');
       }
     }
 

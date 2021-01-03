@@ -354,16 +354,8 @@ img {
   position: relative;
 }
 
-.flip-card.active .flip-card-inner1 {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-.flip-card.active .flip-card-inner2 {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
+.flip-card.active .flip-card-inner1,
+.flip-card.active .flip-card-inner2,
 .flip-card.active .flip-card-inner3 {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
