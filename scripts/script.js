@@ -3,6 +3,7 @@ $(document).ready(function () {
   let choices = [];
   let numberOfChoices = 0;
 
+  // randomizer function
   $(function () {
     const parent = $('.cards');
     const divs = parent.children();
@@ -10,7 +11,7 @@ $(document).ready(function () {
       parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
     }
   });
-
+  // keep the selected card face up when we are selecting the next card
   const selectedCard = $('.flip-card').on('click', function () {
     let $this = $(this);
     if ($this.hasClass('active')) return;
@@ -23,8 +24,8 @@ $(document).ready(function () {
       choices = [];
     };
 
+    // implement game rules
     for (let i = 0; i < choices.length; i++) {
-
       if (choices[i] === 'not-joker' && numberOfChoices == 1) {
         const secondMessage = `
           <p class="result-text">
@@ -55,11 +56,9 @@ $(document).ready(function () {
         $('.flip-card').off('click');
       }
     }
-
   });
-
-  let resetGame = $('.button').on('click', function () {
+  // play again button function
+  const resetGame = $('.button').on('click', function () {
     location.reload()
   });
-
 });

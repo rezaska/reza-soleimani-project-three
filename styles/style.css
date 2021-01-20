@@ -236,54 +236,50 @@ html {
 }
 
 .header {
-  height: 15vh;
   background-color: #102B3F;
   color: white;
   text-align: center;
+  height: auto;
 }
 
 .header-text {
-  font-size: 48px;
+  font-size: 2rem;
   color: white;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Bangers', cursive;
   display: inline-block;
-  padding-top: 25px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-h1 {
-  margin: 0;
 }
 
 main {
   background-color: #A06CD5;
+  height: auto;
 }
 
 .rules {
-  height: 20vh;
   text-align: center;
 }
 
 .rules-text {
   display: inline-block;
-  font-family: 'Signika', sans-serif;
-  margin-top: 30px;
-  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3rem;
   color: #102B3F;
+  text-align: left;
+  padding: 30px 0;
 }
 
 .footer {
   background-color: #102B3F;
   padding: 20px;
   text-align: center;
+  height: auto;
 }
 
 .footer-text {
   margin: 0;
-  font-size: 20px;
+  font-size: 1rem;
   color: white;
-  font-family: 'Signika', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .footer-text a {
@@ -294,23 +290,23 @@ main {
 
 .result {
   text-align: center;
+  padding: 50px 0;
 }
 
 .result-text {
-  margin: 0;
   display: inline-block;
-  font-family: 'Signika', sans-serif;
-  font-size: 45px;
+  font-family: 'Bangers', cursive;
+  font-size: 3rem;
   color: #102B3F;
-  padding-bottom: 30px;
+  font-weight: 600;
 }
 
 .button {
-  background-color: #102B3F;
-  border: none;
-  color: white;
-  font-family: 'Signika', sans-serif;
-  font-size: 20px;
+  background-color: transparent;
+  border: white 1px solid;
+  color: #102B3F;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
   color: white;
   cursor: pointer;
   text-align: center;
@@ -319,9 +315,15 @@ main {
   border-radius: 4px;
 }
 
+.button:hover {
+  background-color: #102B3F;
+  color: white;
+  border: none;
+}
+
 .button-container {
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 100px;
 }
 
 .cards {
@@ -332,13 +334,13 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-line-pack: center;
       align-content: center;
-  height: 40vh;
 }
 
 img {
@@ -352,6 +354,7 @@ img {
   -webkit-perspective: 600px;
           perspective: 600px;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .flip-card.active .flip-card-inner1,
@@ -404,26 +407,8 @@ img {
           transform: rotateY(180deg);
 }
 
-@media (max-width: 700px) {
-  .header-text {
-    font-size: 30px;
-    padding: 20px 40px 20px 40px;
-  }
-  .rules {
-    margin-bottom: 80px;
-  }
+@media (max-width: 800px) {
   .rules-text {
-    padding: 0 5px 0 5px;
-    font-size: 20px;
-  }
-  .cards {
-    height: 100%;
-  }
-  .flip-card {
-    padding: 5px;
-  }
-  .result-text {
-    font-size: 35px;
-    padding: 20px 5px 20px 5px;
+    padding: 30px;
   }
 }
